@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+
+    "name": "",
+    "description": "",
+    "version": "0.1.0",
+    "options_page": "src/option.html",
+    "browser_action": {
+        "default_icon": "src/img/icon.png",
+        "default_popup": "src/popup.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "identity"
+    ],
+    "background": {
+        "page": "src/eventPage.html",
+        "persistent": false
+    },
+    "oauth2": {
+       "client_id": "",
+        "scopes": [
+            "openid",
+            "email",
+            "profile"
+        ]
+    },
+    "content_security_policy": "script-src 'unsafe-eval'; object-src 'self'"
+}
